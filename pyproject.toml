@@ -6,6 +6,9 @@ authors = ["AnneliesVlaar <66774020+AnneliesVlaar@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+click = "^8.1.7"
+numpy = "^1.26.2"
+pandas = "^2.1.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
