@@ -3,6 +3,7 @@ import numpy as np
 from numpy import pi
 import pandas as pd
 
+# create a group of commands
 @click.group()
 def cmd_group():
     """ The smallangle command and the subcommand sin and tan generate lists of values between 0 and 2pi
@@ -12,7 +13,10 @@ def cmd_group():
     """
     pass
 
+# create a subcommand sin
 @cmd_group.command()
+
+# add an optional argument -n 
 @click.option(
     "-n",
     "--number",
@@ -30,7 +34,10 @@ def sin(number):
     df = pd.DataFrame({"x": x, "sin (x)": np.sin(x)})
     print(df)
 
+# create a subcommand tan
 @cmd_group.command()
+
+# add an optional argument -n
 @click.option(
     "-n",
     "--number",
@@ -48,6 +55,6 @@ def tan(number):
     df = pd.DataFrame({"x": x, "tan (x)": np.tan(x)})
     print(df)
 
-
+# this code only runs if the script "smallangle.py" is run directly
 if __name__ == "__main__":
     sin(10)
