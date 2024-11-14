@@ -21,3 +21,4 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.scripts]
 sin = "smallangle.smallangle:sin"
 tan = "smallangle.smallangle:tan"
+smallangle = "smallangle.smallangle:cmd_group"
